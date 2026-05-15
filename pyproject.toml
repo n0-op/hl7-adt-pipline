@@ -1,0 +1,19 @@
+[project]
+name = "hl7-adt-pipeline"
+version = "0.1.0"
+description = "HL7 ADT message parsing and storage pipeline with HIPAA-aligned AWS configuration"
+requires-python = ">=3.10"
+dependencies = [
+    "hl7apy>=1.3.5",
+    "boto3",
+    "psycopg2-binary",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
